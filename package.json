@@ -1,0 +1,29 @@
+{
+  "name": "explore-docker-react",
+  "version": "0.0.0",
+  "description": "An example project to explore React apps using Docker",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "npm run docker:create-react-app:up",
+    "build": "npm run docker:create-react-app:up:clean",
+    "stop": "npm run docker:create-react-app:stop",
+    "docker:create-react-app:up": "docker-compose -f docker-compose.create-react-app.yml up",
+    "docker:create-react-app:up:clean": "docker-compose -f docker-compose.create-react-app.yml up --remove-orphans --build",
+    "docker:create-react-app:stop": "docker-compose -f docker-compose.create-react-app.yml down",
+    "docker:nuke": "npm run docker:nuke:containers && docker rmi -f $(docker images -q)",
+    "docker:nuke:containers": "docker rm $(docker ps -aq)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobBrennan/explore-docker-react.git"
+  },
+  "author": "Rob Brennan <rob@therobbrennan.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRobBrennan/explore-docker-react/issues"
+  },
+  "homepage": "https://github.com/TheRobBrennan/explore-docker-react#readme"
+}
