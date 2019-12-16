@@ -2,22 +2,15 @@
   "name": "explore-docker-react",
   "version": "0.0.0",
   "description": "An example project to explore React apps using Docker",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
-    "start": "npm run docker:create-react-app-experimental:up",
-    "build": "npm run docker:create-react-app-experimental:up:clean",
-    "stop": "npm run docker:create-react-app-experimental:stop",
-    "docker:create-react-app:up": "docker-compose -f docker-compose.create-react-app.yml up",
-    "docker:create-react-app:up:clean": "docker-compose -f docker-compose.create-react-app.yml up --remove-orphans --build",
-    "docker:create-react-app:stop": "docker-compose -f docker-compose.create-react-app.yml down",
-    "docker:create-react-app-experimental:up": "docker-compose -f docker-compose.create-react-app-experimental.yml up",
-    "docker:create-react-app-experimental:up:clean": "docker-compose -f docker-compose.create-react-app-experimental.yml up --remove-orphans --build",
-    "docker:create-react-app-experimental:stop": "docker-compose -f docker-compose.create-react-app-experimental.yml down",
-    "docker:nuke": "npm run docker:nuke:containers && docker rmi -f $(docker images -q)",
-    "docker:nuke:containers": "docker rm $(docker ps -aq)"
+    "build": "npm run start:clean",
+    "start": "npm run start:create-react-app",
+    "start:clean": "npm run start:create-react-app:clean",
+    "stop": "npm run stop:create-react-app",
+    "start:create-react-app": "cd examples/create-react-app && npm start",
+    "start:create-react-app:clean": "cd examples/create-react-app && npm run build",
+    "stop:create-react-app": "cd examples/create-react-app && npm run stop",
+    "docker:nuke": "docker system prune -a && docker volume prune"
   },
   "repository": {
     "type": "git",

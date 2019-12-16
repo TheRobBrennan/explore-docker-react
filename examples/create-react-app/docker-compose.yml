@@ -5,11 +5,11 @@ services:
   create-react-app:
     container_name: create-react-app
     build:
-      context: ./examples/create-react-app
+      context: ./
       dockerfile: ./Dockerfile
-    command: bash -c "npm start"
+    command: sh -c "npm run start:local"
     volumes:
-      - './examples/create-react-app:/app'
+      - './:/app'
       # We are specifying an anonymous volume here so that our local node_modules directory does not override node_modules installed in our container
       - '/app/node_modules'
     ports:
