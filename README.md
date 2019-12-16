@@ -19,7 +19,7 @@ v12.13.1
 
 # Verify that the npm package manager has been installed
 $ npm -v
-6.13.2
+6.13.3
 ```
 
 ## Examples
