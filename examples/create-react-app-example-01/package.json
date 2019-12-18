@@ -11,8 +11,11 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "docker-compose up",
+    "build": "docker-compose up --remove-orphans --build --force-recreate",
+    "stop": "docker-compose down",
+    "start:local": "react-scripts start",
+    "build:local": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
