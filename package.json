@@ -4,15 +4,18 @@
   "description": "An example project to explore React apps using Docker",
   "scripts": {
     "build": "npm run start:clean",
-    "start": "npm run start:create-react-app",
-    "start:clean": "npm run start:create-react-app:clean",
-    "stop": "npm run stop:create-react-app",
+    "start": "npm run start:create-react-app-example-01",
+    "start:clean": "npm run start:create-react-app-example-01:clean",
+    "stop": "npm run stop:create-react-app-example-01",
     "start:create-react-app": "cd examples/create-react-app && npm start",
     "start:create-react-app:clean": "cd examples/create-react-app && npm run build",
     "stop:create-react-app": "cd examples/create-react-app && npm run stop",
     "start:create-react-app-experimental": "cd examples/create-react-app && npm start",
     "start:create-react-app-experimental:clean": "cd examples/create-react-app && npm run build",
     "stop:create-react-app-experimental": "cd examples/create-react-app && npm run stop",
+    "start:create-react-app-example-01": "cd examples/create-react-app-example-01 && npm start",
+    "start:create-react-app-example-01:clean": "cd examples/create-react-app-example-01 && npm run build",
+    "stop:create-react-app-example-01": "cd examples/create-react-app-example-01 && npm run stop",
     "docker:nuke": "docker system prune -a && docker volume prune"
   },
   "repository": {
