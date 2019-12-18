@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) - inspired by [Manage Global State with Context API and Hooks](https://react.christmas/2019/7)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) - inspired by [Manage Global State with Context API and Hooks](https://react.christmas/2019/7):
+
+![screencasts/preview.gif](screencasts/preview.gif)
 
 ## Available Scripts
 
