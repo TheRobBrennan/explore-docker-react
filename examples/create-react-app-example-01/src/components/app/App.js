@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CountriesContainer from './components/countries-container/CountriesContainer';
+import CountriesContainer from '../countries-container/CountriesContainer';
 
 const App = () => {
   return <CountriesContainer />;
