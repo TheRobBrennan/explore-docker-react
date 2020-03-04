@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 // Current release of React (which does not have support for concurrent mode)
 // ReactDOM.render(<App />, document.getElementById('root'));
 
-// If we have react@experimenal and react-dom@experimental, we can enable concurrent mode
+// If we have react@experimental and react-dom@experimental, we can enable concurrent mode
 const rootEl = document.getElementById('root');
 const root = ReactDOM.createRoot(rootEl);
 root.render(<App />);
