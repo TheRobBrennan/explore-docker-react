@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
 
-  create-react-app-experimental:
-    container_name: create-react-app-experimental
+  create-react-app-example-03-experimental:
+    container_name: create-react-app-example-03-experimental
     build:
       context: ./
       dockerfile: ./Dockerfile
